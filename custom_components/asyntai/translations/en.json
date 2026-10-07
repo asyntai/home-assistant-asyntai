@@ -1,0 +1,42 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect Asyntai",
+        "description": "Use your Asyntai AI agent as a Home Assistant conversation agent. It answers with everything it knows about your website, your products and your services. Copy your API key from [Asyntai settings]({api_key_url}).",
+        "data": {
+          "api_key": "API key"
+        },
+        "data_description": {
+          "api_key": "The API key from Settings, API in your Asyntai dashboard."
+        }
+      },
+      "website": {
+        "title": "Choose the website",
+        "description": "Your account has more than one AI agent. Choose the website whose knowledge answers in Home Assistant.",
+        "data": {
+          "website_id": "Website"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Enter a new Asyntai API key",
+        "description": "Asyntai no longer accepts the API key for {website}. Copy a new key from [Asyntai settings]({api_key_url}).",
+        "data": {
+          "api_key": "API key"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Asyntai did not accept this API key.",
+      "plan_required": "The Asyntai API needs the Starter plan or higher.",
+      "cannot_connect": "Could not reach Asyntai. Check the internet connection of Home Assistant.",
+      "no_websites": "This Asyntai account has no website yet. Add a website in the Asyntai dashboard first.",
+      "website_missing": "This key belongs to an account that does not have this website.",
+      "unknown": "Unexpected error. See the Home Assistant log."
+    },
+    "abort": {
+      "already_configured": "This website is already connected.",
+      "reauth_successful": "The new API key is saved."
+    }
+  }
+}
